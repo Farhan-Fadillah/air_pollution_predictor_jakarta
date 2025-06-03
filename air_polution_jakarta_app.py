@@ -93,4 +93,8 @@ if st.session_state.hasil_prediksi is not None:
         ).add_to(m)
     st_folium(m, width=700, height=500)
 
+# Footer
+st.markdown("---")
+st.markdown("Farhan Fadillah")
+
 
