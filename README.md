@@ -185,6 +185,6 @@ The RandomForestRegressor is loaded and cached to **optimize app performance**, 
 
 ---
 
-#Summary
+# Summary
 
 This project aims to develop a **machine learning-based air pollution prediction app** for Jakarta, utilizing a **RandomForestRegressor** model trained on historical environmental data. The application predicts Air Quality Index (AQI) for various Jakarta regions several days in advance, provides health risk categories and tailored recommendations, and visually presents the results on an interactive map.
