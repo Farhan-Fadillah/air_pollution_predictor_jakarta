@@ -95,6 +95,6 @@ if st.session_state.hasil_prediksi is not None:
 
 # Footer
 st.markdown("---")
-st.markdown("Farhan Fadillah")
+st.markdown("Made By Farhan Fadillah")
 
 
