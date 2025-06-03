@@ -50,7 +50,7 @@ A machine learning-powered web application built using **Streamlit** that predic
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 - **Model**: RandomForestRegressor
 - **Interface**: Streamlit Web App
@@ -60,7 +60,7 @@ A machine learning-powered web application built using **Streamlit** that predic
 
 ---
 
-## 🧠 Why RandomForestRegressor?
+## Why RandomForestRegressor?
 
 `RandomForestRegressor` is chosen for this project because:
 
@@ -115,11 +115,11 @@ This results in a **more stable and accurate** prediction than a single decision
 
 ---
 
-## 🗺Flowchart
+## Flowchart
 
 ```mermaid
 flowchart TD
-    A[User selects prediction date (0–7 days ahead)] --> B[Load & cache trained RandomForestRegressor]
+    A[User selects prediction date (0-7 days ahead)] --> B[Load & cache trained RandomForestRegressor]
     B --> C[Loop through Jakarta regions]
     C --> D[Generate random temp & humidity for each region]
     D --> E[Convert selected date to ordinal format]
@@ -129,8 +129,3 @@ flowchart TD
     H --> I[Display prediction table]
     I --> J[Generate color-coded folium map]
     J --> K[Show map with popups in Streamlit]
-
-
-
-
-
