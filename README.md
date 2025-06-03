@@ -1,4 +1,4 @@
-# Jakarta's Air Polution Predictor App : An Alert for all
+# Jakarta's Air Pollution Predictor App : An Alert for all
 Jakarta, as the capital city of Indonesia, is one of the most densely populated urban areas in Southeast Asia. Rapid urbanization, industrial growth, and increasing vehicular traffic have significantly contributed to deteriorating air quality in the region. Air pollution poses a serious threat to public health, the environment, and overall quality of life.
 
 ![jakarta](https://github.com/Farhan-Fadillah/picture_list/blob/039fc4643af941893e8a1d941898c15c35384295/jakarta.jpg)
