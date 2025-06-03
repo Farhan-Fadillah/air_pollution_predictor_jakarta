@@ -100,7 +100,7 @@ This results in a **more stable and accurate** prediction than a single decision
 
 ---
 
-## ⚙How It Works
+## How It Works
 
 1. **User selects a future date** (0–7 days ahead).
 2. The app loads the trained RandomForest model (cached for performance).
@@ -119,13 +119,15 @@ This results in a **more stable and accurate** prediction than a single decision
 
 ```mermaid
 flowchart TD
-    A[User selects prediction date (0-7 days ahead)] --> B[Load & cache trained RandomForestRegressor]
-    B --> C[Loop through Jakarta regions]
-    C --> D[Generate random temp & humidity for each region]
-    D --> E[Convert selected date to ordinal format]
+    A[User selects prediction date (0-7 days)] --> B[Load trained model]
+    B --> C[Iterate over Jakarta regions]
+    C --> D[Generate random temperature & humidity]
+    D --> E[Convert date to ordinal format]
     E --> F[Predict AQI using model]
-    F --> G[Classify AQI & generate health recommendation]
-    G --> H[Store prediction in DataFrame]
-    H --> I[Display prediction table]
-    I --> J[Generate color-coded folium map]
-    J --> K[Show map with popups in Streamlit]
+    F --> G[Determine category and recommendation]
+    G --> H[Append prediction to result table]
+    H --> I[Display result table in Streamlit]
+    I --> J[Render Folium map with markers]
+    J --> K[Display interactive map in app]
+```
+
