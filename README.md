@@ -115,19 +115,72 @@ This results in a **more stable and accurate** prediction than a single decision
 
 ---
 
-## Flowchart
+## 🎯 AQI-Based Recommendation System
 
-```mermaid
-flowchart TD
-    A[User selects prediction date (0-7 days)] --> B[Load trained model]
-    B --> C[Iterate over Jakarta regions]
-    C --> D[Generate random temperature & humidity]
-    D --> E[Convert date to ordinal format]
-    E --> F[Predict AQI using model]
-    F --> G[Determine category and recommendation]
-    G --> H[Append prediction to result table]
-    H --> I[Display result table in Streamlit]
-    I --> J[Render Folium map with markers]
-    J --> K[Display interactive map in app]
-```
+After the model predicts the Air Quality Index (AQI), each result is **automatically classified** into a category based on standardized air quality ranges. Each category is paired with a **personalized health suggestion**, offering users actionable guidance:
 
+| AQI Range | Category                            | Recommendation                                             |
+|-----------|--------------------------------------|-------------------------------------------------------------|
+| 0–49      | Good                                 | Air is clean and safe for outdoor activities.               |
+| 50–99     | Moderate                             | Sensitive individuals should be cautious.                   |
+| 100–149   | Unhealthy for Sensitive Groups       | Limit outdoor activity if you have respiratory conditions.  |
+| 150–199   | Unhealthy                            | Reduce outdoor exposure.                                    |
+| 200+      | Very Unhealthy                       | Avoid outdoor activities and wear a mask if necessary.      |
+
+These recommendations are shown both in the result table and in the popup message on the interactive map, ensuring users get a clear understanding of health risks per region.
+
+---
+
+## Interactive Map Visualization
+
+The application includes a **real-time interactive map** of Jakarta powered by [Folium](https://python-visualization.github.io/folium/), where each region is marked with a color-coded **circle marker** based on the predicted AQI:
+
+| AQI Range | Marker Color | Meaning               |
+|-----------|--------------|------------------------|
+| 0–49      | 🟢 Green      | Good air quality       |
+| 50–99     | 🟠 Orange     | Moderate air quality   |
+| 100+      | 🔴 Red        | Unhealthy or worse     |
+
+Each marker includes a popup with:
+- Region name
+- Predicted AQI value
+- AQI category
+- Health recommendation
+
+This feature gives users a quick and intuitive visual overview of pollution conditions across all Jakarta regions.
+
+---
+
+## 🚀 Streamlit App Features
+
+The Streamlit application includes several interactive and informative components:
+
+![aplikasi](https://github.com/Farhan-Fadillah/picture_list/blob/6e00f2881391831dafd329057ae35081f399a158/prediction%20app%20air%20polution.png)
+
+### 🔘 Date Selection
+Users can select a date between today and the next 7 days. This allows for **short-term forecasting** of air pollution.
+
+### 📊 Tabular Output
+A dynamic table displays predicted AQI results for each Jakarta region, along with:
+- The region name
+- AQI value
+- AQI category
+- Corresponding health recommendation
+
+This gives a **quick, readable summary** of pollution risk levels.
+
+![result](https://github.com/Farhan-Fadillah/picture_list/blob/6e00f2881391831dafd329057ae35081f399a158/result%20prediction%20app%20air%20polution.png)
+
+### 🗺️ Interactive Jakarta Map
+A live-rendered map of Jakarta using Folium:
+- Displays regional pollution levels with **color-coded markers**
+- Shows detailed info via popups when markers are clicked
+- Helps users **visually compare air quality across regions**
+
+### 🔁 Prediction Refresh
+Each time the "Predict" button is pressed, new randomized temperature and humidity values are used. This allows users to **simulate different possible scenarios** for the same date.
+
+### 🧠 Cached Model
+The RandomForestRegressor is loaded and cached to **optimize app performance**, especially when users repeatedly interact with the app.
+
+---
