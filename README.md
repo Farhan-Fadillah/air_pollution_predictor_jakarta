@@ -1,7 +1,11 @@
 # Jakarta's Air Polution Predictor App : An Alert for all
 Jakarta, as the capital city of Indonesia, is one of the most densely populated urban areas in Southeast Asia. Rapid urbanization, industrial growth, and increasing vehicular traffic have significantly contributed to deteriorating air quality in the region. Air pollution poses a serious threat to public health, the environment, and overall quality of life.
 
+![jakarta](https://github.com/Farhan-Fadillah/picture_list/blob/cda28029919fff8c235c864126960aac5f54eb5b/jakarta.jpg)
+
 Despite efforts to monitor air quality, the dynamic and complex nature of pollution sources makes it challenging to predict pollution levels accurately and in a timely manner. This creates a critical need for advanced predictive tools that can forecast air pollution trends, enabling proactive measures to mitigate adverse effects.
+
+![jakarta_pollution](https://github.com/Farhan-Fadillah/picture_list/blob/cda28029919fff8c235c864126960aac5f54eb5b/jakarta%20air%20polution.jpg)
 
 The development of a machine learning-based air pollution prediction system for Jakarta aims to address this gap by leveraging historical data, environmental factors, and advanced algorithms to provide accurate, real-time forecasts of air pollution levels.
 
@@ -37,6 +41,7 @@ Societal Impact
   - Enhanced Quality of Life: Cleaner air contributes to better living conditions, making Jakarta a more attractive city for residents and businesses.
 
 # SUMMARY
+![summary](https://github.com/Farhan-Fadillah/picture_list/blob/cda28029919fff8c235c864126960aac5f54eb5b/TABLE%20ASPECT%20POLUTION%20APP.png)
 The air pollution prediction project for Jakarta is a crucial initiative that combines cutting-edge machine learning technology with environmental science to tackle one of the city’s most pressing challenges. By providing accurate forecasts, it empowers policymakers, healthcare providers, and the public to take informed actions that protect health, preserve the environment, and enhance the quality of life.
 
 
